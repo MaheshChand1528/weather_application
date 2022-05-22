@@ -1,0 +1,106 @@
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.container {
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: aliceblue;
+}
+.box-div {
+width: 25%;
+height: 60vh;
+background-color: #a5bbdd;
+margin: auto;
+border-radius: 10px;
+box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+position: relative;
+overflow: hidden;
+transform: translate3d(0, 0, 0);
+}
+    .input-div {
+    padding: 20px;
+    }
+    .input-div input {
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    }
+    .no-data{
+    font-weight: bold;
+    font-size: 20px;
+    }
+    .info {
+    margin-top: 10%;
+    }
+    .info h2 {
+    font-size: 40px;
+    text-transform: capitalize;
+    margin: 15px 0 15px 0;
+    }
+    .info i {
+    font-size: 35px;
+    margin-right: 10px;
+    
+    }
+    .info h1{
+    margin-left: 10px;
+    }
+    .info h3 {
+    font-size: 15px;
+    font-weight: 400;
+    }
+    .waveone {
+    opacity: 0.3;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    background: white;
+    width: 60rem;
+    height: 60rem;
+    margin-left: -30rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+    }
+    .wavetwo {
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+    }
+    .wavethree {
+    animation: drift 7000ms infinite linear;
+    z-index: 3 !important;
+    opacity: 0.1;
+    }
+    .box::after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+    }
+    @keyframes drift {
+    from {
+    transform: rotate(0deg);
+    }
+    from {
+    transform: rotate(360deg);
+    }
+    }
+    
+    
